@@ -12,126 +12,145 @@
       rel="stylesheet" />
   </head>
 
-  <body class="font-(Inter) text-sm text-neutral-dark-blue">
+  <body class="flex min-h-screen justify-center bg-neutral-off-white font-[Inter] text-sm text-neutral-dark-blue">
     <!-- Container principale-->
-    <div class="my-10 mx-65">
+    <div class="max-w-277.5 px-4 py-8 md:px-6 md:py-10 lg:px-0">
+      <!--Header-->
       <header>
-        <div class="flex justify-between items-center text-lg mb-8">
+        <div class="mb-8 flex items-center justify-between text-lg md:mb-10">
           <!-- Logo-->
           <div>
-            <img class="p-5 pl-0" src="./assets/images/logo.svg" alt="Logo della pagina" />
+            <img class="w-11 md:w-16" src="./assets/images/logo.svg" alt="Logo della pagina" />
           </div>
 
           <!-- Navbar-->
-          <div>
+          <button class="cursor-pointer md:hidden" aria-label="Apri menu" type="button">
+            <img src="./assets/images/icon-menu.svg" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="hidden md:block">
             <nav>
-              <li class="flex justify-between text-right">
+              <ul class="flex justify-between gap-8 text-right">
                 <!-- Home-->
-                <ol class="w-30">
-                  <a class="hover:text-primary-red cursore-pointer" href="#">Home</a>
-                </ol>
+                <li>
+                  <a class="cursor-pointer hover:text-primary-red" href="#">Home</a>
+                </li>
 
                 <!-- News-->
-                <ol class="w-30">
-                  <a class="hover:text-primary-red cursore-pointer" href="#">News</a>
-                </ol>
+                <li>
+                  <a class="cursor-pointer hover:text-primary-red" href="#">News</a>
+                </li>
 
                 <!-- Popular-->
-                <ol class="w-30">
-                  <a class="hover:text-primary-red cursore-pointer" href="#">Popular</a>
-                </ol>
+                <li>
+                  <a class="cursor-pointer hover:text-primary-red" href="#">Popular</a>
+                </li>
 
                 <!-- Trending-->
-                <ol class="w-30">
-                  <a class="hover:text-primary-red cursore-pointer" href="#">Trending</a>
-                </ol>
+                <li>
+                  <a class="cursor-pointer hover:text-primary-red" href="#">Trending</a>
+                </li>
 
                 <!-- Categories-->
-                <ol class="w-30">
-                  <a class="hover:text-primary-red cursore-pointer" href="#">Categories</a>
-                </ol>
-              </li>
+                <li>
+                  <a class="cursor-pointer hover:text-primary-red" href="#">Categories</a>
+                </li>
+              </ul>
             </nav>
           </div>
         </div>
       </header>
 
+      <!--Main-->
       <main>
+        <!--!Prima riga-->
+        <!--Sezione Hero-->
         <section>
-          <div class="grid grid-cols-3 grid-rows-1 gap-8">
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
             <!-- Hero-->
-            <div class="col-span-2 row-span-1">
-              <img src="assets/images/image-web-3-desktop.jpg" alt="Immagine decorativa" class="bg-contain max-w150" />
+            <div class="order-1 col-span-1 md:order-1 md:col-span-2">
+              <picture>
+                <source media="(min-width: 768px)" srcset="assets/images/image-web-3-desktop.jpg" />
+                <img src="assets/images/image-web-3-mobile.jpg" alt="Immagine decorativa" class="h-auto w-full bg-contain" />
+              </picture>
             </div>
 
+            <!--Sezione New-->
             <!-- Colonna destra-->
-            <div class="bg-neutral-darkness-blue col-span-1 row-span-2 py-8 px-6">
+            <div class="order-4 col-span-1 bg-neutral-darkness-blue px-6 py-8 md:order-2 md:row-span-2">
               <h2 class="text-primary-orange text-4xl font-bold mb-8">New</h2>
 
               <h3 class="text-white text-[22px] mb-2 font-bold hover:text-primary-orange cursor-pointer">Hydrogen VS Electric Cars</h3>
               <p class="text-neutral-blue text-base">Will hydrogen-fueled cars ever catch up to EVs?</p>
 
-              <hr class="text-grey-500 my-8" />
+              <hr class="my-8 border-white/25" />
 
               <h3 class="text-white text-[22px] mb-2 font-bold hover:text-primary-orange cursor-pointer">The Downsides of AI Artistry</h3>
               <p class="text-neutral-blue text-base">What are the possible adverse effects of on-demand AI image generation?</p>
 
-              <hr class="text-grey-500 my-8" />
+              <hr class="my-8 border-white/25" />
 
-              <h3 class="text-white text-[22px] mb-2 font-bold hover:text-primary-orange cursor-pointer">Is Vc Funding Drying Up?</h3>
-              <p class="text-neutral-blue text-base">Private funding by VC firms is down 50% YOY. We take a look at what that means</p>
+              <h3 class="text-white text-[22px] mb-2 font-bold hover:text-primary-orange cursor-pointer">Is VC Funding Drying Up?</h3>
+              <p class="text-neutral-blue text-base">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
             </div>
 
+            <!--!Seconda riga-->
             <!-- blocco sinsitra seconda riga-->
-            <div class="col-span-1">
-              <h2 class="text-6xl text-black font-bold">The Bright Future of Web 3.0?</h2>
+            <div class="order-2 col-span-1 md:order-3 md:col-span-1">
+              <h2 class="text-5xl leading-none text-black font-bold md:text-6xl">The Bright Future of Web 3.0?</h2>
             </div>
 
             <!--blocco destra seconda riga-->
-            <div class="col-span-1">
-              <p class="text-lg">
+            <div class="order-3 col-span-1 md:order-4 md:col-span-1">
+              <p class="text-base leading-8">
                 We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
               </p>
-              <button class="bg-neutral-darkness-blue text-white text-base py-3 px-12 font-medium mt-5 tracking-widest">READ MORE</button>
+              <button
+                class="mt-6 cursor-pointer bg-neutral-darkness-blue px-8 py-3 text-base font-medium tracking-widest text-white hover:bg-neutral-darkness-blue hover:text-white md:px-12">
+                READ MORE
+              </button>
             </div>
           </div>
         </section>
 
-        <!--Terza riga-->
-
+        <!--!Terza riga-->
         <section>
-          <div class="flex flex-column justify-between gap-8 mt-20">
-            <div class="flex w-[40%]">
-              <div>
-                <img class="max-w-30" src="assets/images/image-retro-pcs.jpg" alt="Imamgine di un pc" />
+          <div class="mt-12 flex flex-col justify-between gap-6 md:mt-16 md:flex-row">
+            <!--!Primo blocco-->
+            <div class="grid w-full grid-cols-[7.5rem_1fr] items-stretch gap-4 md:w-1/3 md:grid-cols-[6.25rem_1fr] md:gap-5">
+              <div class="h-full">
+                <img class="h-full w-full object-cover" src="assets/images/image-retro-pcs.jpg" alt="Immagine di un pc" />
               </div>
-              <div class="px-5 flex flex-col justify-between">
-                <h2 class="text-primary-red text-3xl font-bold">01</h2>
-                <h3 class="text-black hover:text-primary-red cursor-pointer font-bold text-lg">Reviving Retro PCs</h3>
-                <p>What happenens when old PCs are given modern upgrades?</p>
+
+              <div class="flex min-w-0 flex-col justify-between gap-2 pt-0.5">
+                <h2 class="text-primary-red text-4xl leading-none font-bold">01</h2>
+                <h3 class="cursor-pointer wrap-break-word text-lg font-bold text-black hover:text-primary-red">Reviving Retro PCs</h3>
+                <p class="text-[1.05rem] leading-7">What happens when old PCs are given modern upgrades?</p>
               </div>
             </div>
 
-            <div class="flex w-[40%]">
-              <div>
-                <img class="max-w-30" src="assets/images/image-top-laptops.jpg" alt="Imamgine di una tastiera" />
+            <!--!Secondo blocco-->
+            <div class="grid w-full grid-cols-[7.5rem_1fr] items-stretch gap-4 md:w-1/3 md:grid-cols-[6.25rem_1fr] md:gap-5">
+              <div class="h-full">
+                <img class="h-full w-full object-cover" src="assets/images/image-top-laptops.jpg" alt="Immagine di una tastiera" />
               </div>
-              <div class="px-5 flex flex-col justify-between">
-                <h2 class="text-primary-red text-3xl font-bold">02</h2>
-                <h3 class="text-black hover:text-primary-red cursor-pointer font-bold text-lg">Top 10 Laptops of 2022</h3>
-                <p>Our best picks for various needs and budgets</p>
+              <div class="flex min-w-0 flex-col justify-between gap-2 pt-0.5">
+                <h2 class="text-primary-red text-4xl leading-none font-bold">02</h2>
+                <h3 class="cursor-pointer wrap-break-word text-lg font-bold text-black hover:text-primary-red">Top 10 Laptops of 2022</h3>
+                <p class="text-[1.05rem] leading-7">Our best picks for various needs and budgets.</p>
               </div>
             </div>
 
-            <div class="flex w-[40%]">
-              <div>
-                <img class="max-w-30" src="assets/images/image-gaming-growth.jpg" alt="Imamgine di un controller" />
+            <!--!Terzo blocco-->
+            <div class="grid w-full grid-cols-[7.5rem_1fr] items-stretch gap-4 md:w-1/3 md:grid-cols-[6.25rem_1fr] md:gap-5">
+              <div class="h-full">
+                <img class="h-full w-full object-cover" src="assets/images/image-gaming-growth.jpg" alt="Immagine di un controller" />
               </div>
-              <div class="px-5 flex flex-col justify-between">
-                <h2 class="text-primary-red text-3xl font-bold">03</h2>
-                <h3 class="text-black hover:text-primary-red cursor-pointer font-bold text-lg">The Growth of Gaming</h3>
-                <p>How the pandemic has sparked fresh opportunities</p>
+              <div class="flex min-w-0 flex-col justify-between gap-2 pt-0.5">
+                <h2 class="text-primary-red text-4xl leading-none font-bold">03</h2>
+                <h3 class="cursor-pointer wrap-break-word text-lg font-bold text-black hover:text-primary-red">The Growth of Gaming</h3>
+                <p class="text-[1.05rem] leading-7">How the pandemic has sparked fresh opportunities.</p>
               </div>
             </div>
           </div>
